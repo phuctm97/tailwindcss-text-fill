@@ -28,13 +28,18 @@ module.exports = {
     require("tailwindcss-text-fill"),
     // Other plugins.
   ],
+  variants: {
+    extend: {
+      textFill: ["dark"], // Enable variants.
+    },
+  },
 };
 ```
 
 Style your components `text-fill-{color}`, e.g. `text-fill-gray-100`, `text-fill-gray-200`, `text-fill-red-500`, etc.
 
 ```jsx
-<input className="text-fill-gray-100" />
+<input className="text-fill-gray-900 dark:text-fill-gray-100" />
 ```
 
 ## Requirements

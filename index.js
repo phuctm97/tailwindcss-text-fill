@@ -1,16 +1,21 @@
 const plugin = require("tailwindcss/plugin");
+const flatten = require("flatten-tailwindcss-theme");
 
-const autofill = plugin(({ addVariant, e }) => {
-  addVariant("autofill", ({ modifySelectors, separator }) => {
-    modifySelectors(({ className }) => {
-      const newClass = e(`autofill${separator}${className}`);
-      return [
-        `.${newClass}:-webkit-autofill`,
-        `.${newClass}:-webkit-autofill:hover`,
-        `.${newClass}:-webkit-autofill:focus`,
-      ].join(",");
-    });
-  });
-});
+const textFill = plugin(
+  ({ addUtilities, variants, theme, e }) => {
+    const colors = flatten(theme("colors"));
+    const utils = Object.entries(colors).reduce(
+      (res, [key, value]) =>
+        Object.assign(res, {
+          [`.${e(`text-fill-${key}`)}`]: {
+            "-webkit-text-fill-color": value,
+          },
+        }),
+      {}
+    );
+    addUtilities(utils, variants("textFill"));
+  },
+  { variants: { textFill: [] } }
+);
 
-module.exports = autofill;
+module.exports = textFill;
