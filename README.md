@@ -3,7 +3,7 @@
 [![npm version][npm badge]][npm url]
 [![GitHub license][license badge]][license url]
 
-Add TailwindCSS utilities to override foreground fill color of text content, is especially useful to style autocompleted form fields with [tailwindcss-autofill] because `color` won't work.
+TailwindCSS utility to override foreground fill color of text content, is especially useful to style autocompleted form fields with [tailwindcss-autofill] because `color` won't work.
 
 ## Install
 
@@ -36,7 +36,7 @@ module.exports = {
 };
 ```
 
-Style your components `text-fill-{color}`, e.g. `text-fill-gray-100`, `text-fill-gray-200`, `text-fill-red-500`, etc.
+Style your components using `text-fill-{color}`, e.g. `text-fill-gray-100`, `text-fill-gray-200`, `text-fill-red-500`, etc.
 
 ```jsx
 <input className="text-fill-gray-900 dark:text-fill-gray-100" />
