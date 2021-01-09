@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-text-fill",
   "version": "0.1.2",
-  "description": "🎨 TailwindCSS utilities to override foreground fill color of text content.",
+  "description": "🎨 TailwindCSS utility to override foreground fill color of text content.",
   "keywords": [
     "tailwindcss",
     "tailwindcss-plugin",
