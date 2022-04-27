@@ -5,6 +5,12 @@
 
 TailwindCSS utility to override foreground fill color of text content, is especially useful to style autocompleted form fields with [tailwindcss-autofill] because `color` won't work.
 
+## Requirements
+
+- Node.js 12+
+
+- TailwindCSS 2+
+
 ## Install
 
 ```bash
@@ -26,13 +32,8 @@ module.exports = {
   // ...
   plugins: [
     require("tailwindcss-text-fill"),
-    // Other plugins.
+    // ...other plugins.
   ],
-  variants: {
-    extend: {
-      textFill: ["dark"], // Enable variants.
-    },
-  },
 };
 ```
 
@@ -42,15 +43,9 @@ Style your components using `text-fill-{color}`, e.g. `text-fill-gray-100`, `tex
 <input className="text-fill-gray-900 dark:text-fill-gray-100" />
 ```
 
-## Requirements
+## Author
 
-- Node.js 12+
-
-- TailwindCSS 2
-
----
-
-Made by [@phuctm97].
+- [Minh-Phuc Tran][@phuctm97]
 
 <!-- Badges -->
 
