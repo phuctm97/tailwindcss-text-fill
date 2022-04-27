@@ -9,7 +9,7 @@ TailwindCSS utility to override foreground fill color of text content, is especi
 
 - Node.js 12+
 
-- TailwindCSS 2
+- TailwindCSS 2+
 
 ## Install
 
